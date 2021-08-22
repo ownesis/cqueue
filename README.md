@@ -11,7 +11,7 @@ make
 gcc example.c cqueue.a -o example
 ```
 
-# Docuementation
+# Documentation
 Une queue circulaire ou ring buffer, fonctionne de la même facon qu'une liste chainée/queue FiFo (First in First out)
 La seul différence réside dans le fait que la queue circulaire est d'une taille limité défini par l'utilisateur. 
 ![circular queue](https://www.researchgate.net/profile/Turhan-Karadeniz-2/publication/44785694/figure/fig9/AS:669463758266368@1536624006002/Circular-Queue-Based-Buffer-Implementation-3.ppm)
