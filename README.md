@@ -22,7 +22,7 @@ La seul différence réside dans le fait que la queue circulaire est d'une taill
 **Retour**
 > `cqueue_t *`
 ```c
-cqueue_t cqueue = cqueue_create(10);
+cqueue_t *cqueue = cqueue_create(10);
 
 ```
 
