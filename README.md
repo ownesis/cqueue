@@ -48,10 +48,10 @@ int var = 42;
 int ret = cqueue_push(cqueue, &var);
 ```
 
-### Récupérer la première valeur et la reitirer de la queue
+### Récupérer la première valeur et la retirer de la queue
 Change l'adrese de data par l'adresse de la valeur contenue dans la queue, et retire celle cette dernière.
 **Arguments**
-> cqueue: `cqueue_t`
+> cqueue: `cqueue_t *`
 
 > data: `void **`
 
@@ -62,10 +62,10 @@ int *ptr_var = NULL;
 int ret = cqueue_pop(cqueue, &var);
 ```
 
-### Récupérer la première valeur sans la reitirer de la queue
+### Récupérer la première valeur sans la retirer de la queue
 Change l'adrese de data par l'adresse de la valeur contenue dans la queue.
 **Arguments**
-> cqueue: `cqueue_t`
+> cqueue: `cqueue_t *`
 
 > data: `void **`
 
@@ -78,7 +78,7 @@ int ret = cqueue_get(cqueue, &var);
 
 ### Récupérer la taille utilisé de la queue
 **Arguments**
-> cqueue: `cqueue_t`
+> cqueue: `cqueue_t *`
 
 **Retour**
 > La taille utilisé de la queue `size_t`
@@ -88,7 +88,7 @@ size_t size = CQUEUE_GET_SIZE(cqueue);
 
 ### Savoir si la queue est remplie
 **Arguments**
-> cqueue: `cqueue_t`
+> cqueue: `cqueue_t *`
 
 **Retour**
 > Retourne `1` si la queue est remplie ou ou `0` si elle est vide.
@@ -100,7 +100,7 @@ if (CQUEUE_IS_FULL(cqueue)) {
 
 ### Savoir si la queue est vide
 **Arguments**
-> cqueue: `cqueue_t`
+> cqueue: `cqueue_t *`
 
 **Retour**
 > Retourne `1` si la queue est vide ou ou `0` si elle est pleine.
