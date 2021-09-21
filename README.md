@@ -35,8 +35,10 @@ cqueue_destroy(cqueue);
 
 ### Ajouter une valeur dans la queue
 **! Ajout de l'adresse et non d'une copie de la valeur !**
-Si la valeur de l'objet change, la valeur de l'objet dans la queue sera aussi changé 
+Si la valeur de l'objet change, la valeur de l'objet dans la queue sera aussi changé
+
 **Arguments**
+
 > queue: `cqueue_t *`
 
 > data: `void *`
@@ -49,7 +51,8 @@ int ret = cqueue_push(cqueue, &var);
 ```
 
 ### Récupérer la première valeur et la retirer de la queue
-Change l'adrese de data par l'adresse de la valeur contenue dans la queue, et retire celle cette dernière.
+Change l'adrese de data par l'adresse de la valeur contenue dans la queue, et retire cette dernière.
+
 **Arguments**
 > cqueue: `cqueue_t *`
 
@@ -57,13 +60,14 @@ Change l'adrese de data par l'adresse de la valeur contenue dans la queue, et re
 
 **Retour**
 > `CQUEUE_OK` ou `CQUEUE_NULLPTR` ou `CQUEUE_FULL` ou `CQUEUE_EMPTY` 
-``c
+```c
 int *ptr_var = NULL;
 int ret = cqueue_pop(cqueue, &var);
 ```
 
 ### Récupérer la première valeur sans la retirer de la queue
 Change l'adrese de data par l'adresse de la valeur contenue dans la queue.
+
 **Arguments**
 > cqueue: `cqueue_t *`
 
@@ -71,12 +75,13 @@ Change l'adrese de data par l'adresse de la valeur contenue dans la queue.
 
 **Retour**
 > `CQUEUE_OK` ou `CQUEUE_NULLPTR` ou `CQUEUE_FULL` ou `CQUEUE_EMPTY` 
-``c
+```c
 int *ptr_var = NULL;
 int ret = cqueue_get(cqueue, &var);
 ```
 
 ### Récupérer la taille utilisé de la queue
+
 **Arguments**
 > cqueue: `cqueue_t *`
 
@@ -87,6 +92,7 @@ size_t size = CQUEUE_GET_SIZE(cqueue);
 ```
 
 ### Savoir si la queue est remplie
+
 **Arguments**
 > cqueue: `cqueue_t *`
 
@@ -99,6 +105,7 @@ if (CQUEUE_IS_FULL(cqueue)) {
 ```
 
 ### Savoir si la queue est vide
+
 **Arguments**
 > cqueue: `cqueue_t *`
 
