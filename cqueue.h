@@ -20,6 +20,7 @@
     cqueue_peek(q, (void **)v)
 
 #include <stdint.h>
+#include <stddef.h>
 
 enum CQUEUE_code {
     CQUEUE_OK,
